@@ -5,7 +5,6 @@ ENV KC_HEALTH_ENABLED=true
 ENV KC_METRICS_ENABLED=true
 # change these values to point to a running postgres instance
 # Enable health and metrics support
-ENV KC_HOSTNAME=${KC_HOSTNAME}
 ENV KC_DB=${KC_DB}
 ENV KC_DB_URL=${KC_DB_URL}
 ENV KC_DB_USERNAME=${KC_DB_USERNAME}
