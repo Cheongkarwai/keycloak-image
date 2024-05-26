@@ -12,13 +12,15 @@ COPY --from=builder /opt/keycloak/ /opt/keycloak/
 
 # change these values to point to a running postgres instance
 # Enable health and metrics support
-ENV KC_HOSTNAME_STRICT=false
+ENV KC_HOSTNAME=https://squid-app-dr3jj.ondigitalocean.app
 ENV KC_DB=postgres
 ENV KC_DB_URL=${KC_DB_URL}
 ENV KC_DB_USERNAME=${KC_DB_USERNAME}
 ENV KC_DB_PASSWORD=${KC_DB_PASSWORD}
 ENV KEYCLOAK_HTTPS_CERTIFICATE=https://squid-app-dr3jj.ondigitalocean.app
 ENV KEYCLOAK_HTTPS_KEY=https://squid-app-dr3jj.ondigitalocean.app
+ENV KEYCLOAK_ADMIN=admin
+ENV KEYCLOAK_ADMIN_PASSWORD=root
 
 ENTRYPOINT ["/opt/keycloak/bin/kc.sh"]
 
