@@ -17,6 +17,8 @@ ENV KC_DB=postgres
 ENV KC_DB_URL=${KC_DB_URL}
 ENV KC_DB_USERNAME=${KC_DB_USERNAME}
 ENV KC_DB_PASSWORD=${KC_DB_PASSWORD}
+ENV KEYCLOAK_HTTPS_CERTIFICATE=https://squid-app-dr3jj.ondigitalocean.app
+ENV KEYCLOAK_HTTPS_KEY=https://squid-app-dr3jj.ondigitalocean.app
 
 ENTRYPOINT ["/opt/keycloak/bin/kc.sh"]
 
