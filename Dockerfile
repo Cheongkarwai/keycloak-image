@@ -13,7 +13,6 @@ COPY --from=builder /opt/keycloak/ /opt/keycloak/
 # change these values to point to a running postgres instance
 # Enable health and metrics support
 ENV KC_DB=postgres
-ENV KC.HOSTNAME=localhost
 ENV KC_DB_URL=${KC_DB_URL}
 ENV KC_DB_USERNAME=${KC_DB_USERNAME}
 ENV KC_DB_PASSWORD=${KC_DB_PASSWORD}
