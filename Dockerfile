@@ -19,4 +19,4 @@ ENV KC_DB_PASSWORD=${KC_DB_PASSWORD}
 
 ENTRYPOINT ["/opt/keycloak/bin/kc.sh"]
 
-CMD [ "start-dev" ]
+CMD [ "start" ]
