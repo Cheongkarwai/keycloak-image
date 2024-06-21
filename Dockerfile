@@ -22,8 +22,8 @@ ENV KC_HOSTNAME=localhost
 # ENV KC_DB_URL=${KC_DB_URL}
 # ENV KC_DB_USERNAME=${KC_DB_USERNAME}
 # ENV KC_DB_PASSWORD=${KC_DB_PASSWORD}
-ENV KEYCLOAK_HTTPS_CERTIFICATE=localhost
-ENV KEYCLOAK_HTTPS_KEY=localhost
+ENV KEYCLOAK_HTTPS_CERTIFICATE=https://lfhardware-keycloak-app-u9db4.ondigitalocean.app
+ENV KEYCLOAK_HTTPS_KEY=https://lfhardware-keycloak-app-u9db4.ondigitalocean.app
 ENV KEYCLOAK_ADMIN=admin
 ENV KEYCLOAK_ADMIN_PASSWORD=root
 
