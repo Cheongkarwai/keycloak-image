@@ -4,6 +4,8 @@ FROM quay.io/keycloak/keycloak:latest as builder
 ENV KC_HEALTH_ENABLED=true
 ENV KC_METRICS_ENABLED=true
 
+ENV KC_DB=postgres
+
 WORKDIR /opt/keycloak
 RUN /opt/keycloak/bin/kc.sh build
 
@@ -13,7 +15,6 @@ COPY --from=builder /opt/keycloak/ /opt/keycloak/
 # change these values to point to a running postgres instance
 # Enable health and metrics support
 # ENV KC_HOSTNAME=squid-app-dr3jj.ondigitalocean.app
-ENV KC_DB=postgres
 ENV KC_DB_URL=jdbc:postgresql://keycloak-postgresql-sgp1-72652-do-user-15497825-0.c.db.ondigitalocean.com:25060/defaultdb
 ENV KC_DB_USERNAME=doadmin
 ENV KC_DB_PASSWORD=AVNS_zvPrGibvBkcP6qiXL3_
