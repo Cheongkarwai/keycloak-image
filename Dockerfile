@@ -13,7 +13,7 @@ COPY --from=builder /opt/keycloak/ /opt/keycloak/
 
 # change these values to point to a running postgres instance
 # Enable health and metrics support
-# ENV KC_HOSTNAME=https://lfhardware-keycloak-app-u9db4.ondigitalocean.app
+ENV KC_HOSTNAME=https://lfhardware-keycloak-app-u9db4.ondigitalocean.app
 ENV KC_DB=postgres
 ENV KC_DB_URL=jdbc:postgresql://keycloak-postgresql-sgp1-72652-do-user-15497825-0.c.db.ondigitalocean.com:25060/defaultdb
 ENV KC_DB_USERNAME=doadmin
